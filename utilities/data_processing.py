@@ -42,7 +42,7 @@ def hicToMat(h,juicer_path,tmp_dir='.',prefix='hic',autoremove=False,overwrite=F
 			if os.path.isfile(output_path) and not overwrite:
 				continue
 
-			cmd = 'java -jar {0} dump observed KR {1} {2} {3} BP 100000 {4} > tmp_juicer_log'.format(juicer_path,h,chrm1,chrm2,output_path)
+			cmd = '/home/jl9324/env/download/straw/C++/straw KR {0} {1} {2} BP 1000 > {3} > tmp_juicer_log'.format(h,chrm1,chrm2,output_path)
 			call([cmd],shell=True)
 
 	""" File path of the inter-chromosomal matrix """
